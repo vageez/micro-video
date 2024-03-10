@@ -7,7 +7,7 @@ module.exports = (_, argv) => ({
     publicPath:
       argv.mode === "development"
         ? "http://localhost:8087/"
-        : "https://awevideo.bellmedia.ca/", // Production
+        : "https://micro-video.vercel.app/", // Production
   },
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
@@ -48,7 +48,7 @@ module.exports = (_, argv) => ({
       name: "video",
       filename: "remoteEntry.js",
       remotes: {
-        host: "host@http://localhost:8080/remoteEntry.js",
+        host: "host@https://micro-host-self.vercel.app/remoteEntry.js",
       },
       exposes: {
         "./Video": "./src/components/Video",
